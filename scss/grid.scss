@@ -1,0 +1,58 @@
+// Border-box Sizing
+*{ @include box-sizing(border-box); }
+
+// Containers
+img{ max-width: 100%; }
+
+.container{  
+    @include clearfix();
+    max-width: $page-width;
+    margin: 0 auto;
+    padding: 0 1em;
+    
+    &.padded {
+        max-width: $page-width + ($column-gutter * 2);
+        padding: 0 calc-percent($column-gutter, $page-width);
+        
+        @include respond-to($desktop-breakpoint) {
+            padding: 0 $column-gutter;
+        }
+    }
+    
+    @include respond-to($tablet-breakpoint) {  
+        padding: 0 2em;
+    }
+    
+    @include respond-to($desktop-breakpoint){  
+        padding: 0;
+    }
+}
+
+// Grid Elements
+.row{  
+    @include clearfix();  
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @include respond-to($desktop-breakpoint) {
+        margin-left: calc-percent($column-gutter, $page-width) * -1;  
+    }
+    
+}
+
+.columns{
+    width: 100%;
+    
+    @include respond-to($tablet-breakpoint) {
+        float: left;  
+        padding-left: calc-percent($column-gutter, $page-width);    
+        
+        @for $i from 1 through $column-count {
+            &.#{convert-number-to-word($i)} { width: calc-percent($i, $column-count); }
+        }
+    }
+    
+    &.centered{ margin: 0 auto; float: none; }
+    
+}

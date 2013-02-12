@@ -1,0 +1,13 @@
+// Grid Settings
+$page-width: 960px;
+$column-count: 12;
+$column-width: $page-width/$column-count;
+$column-gutter: 30px;
+
+// Media Query Settings
+$mobile-breakpoint: 320px;
+$mobile-horizontal-breakpoint: 480px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 940px;
+
+// Colors
