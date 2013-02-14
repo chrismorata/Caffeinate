@@ -10,14 +10,12 @@
   @return "invalid";
 }
 
-// Layout Helpers
+// CSS3 Helpers
 @mixin box-sizing( $box-sizing ) { 
     -webkit-box-sizing: $box-sizing;
     -moz-box-sizing: $box-sizing;
     box-sizing: $box-sizing;
 }
-
-.clear{ clear: both; }
 
 
 // Responsive Helpers
@@ -28,6 +26,15 @@
 @mixin respond-to($breakpoint) { 
     @media screen and (min-width: $breakpoint) { @content }
 }
+
+
+// Browser Prefixing
+@mixin support-ie($version) {  
+    .#{$version} & {
+        @content
+    }
+}
+
 
 // Clearfix
 @mixin clearfix {
@@ -45,3 +52,5 @@
 .cf {
 	@include clearfix();
 }
+
+.clear{ clear: both; }
