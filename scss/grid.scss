@@ -42,19 +42,27 @@ img{ max-width: 100%; }
 }
 
 .grid-unit{
-    width: 100%;
+    width: 100%;    
     
+    &.mobile-one-half{ width: 50%; }
+    &.mobile-one-third{ width: 33.33333%; }
+    &.mobile-two-thirds{ width: 66.66666%; }
+    &.mobile-one-quarter{ width: 25%; }
+    &.mobile-three-quarters{ width: 75%; }
+        
     @include respond-to($mobile-horizontal-breakpoint) {
         float: left;  
         padding-left: calc-percent($column-gutter, $page-width);    
-        
+                
         @for $i from 1 through $column-count {
-            &.#{convert-number-to-word($i)} { width: calc-percent($i, $column-count); }
+            @if $i == 1 {
+                &.one-twelfth { width: 8.33333%; }
+            } @elseif $i == 12 {  
+                &.whole { width: 100%; }
+            } @else{ 
+                &.#{convert-number-to-word($i)}-twelfths { width: calc-percent($i, $column-count); }
+            }
         }
-    }
-    
-    @include support-ie(lt-ie9){  
-        width: 50%;
     }
     
     &.centered{ margin: 0 auto; float: none; }
