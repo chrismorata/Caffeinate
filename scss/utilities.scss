@@ -28,6 +28,13 @@
     @media screen and (min-width: $breakpoint) { @content }
 }
 
+@mixin device-type($namespace:"") { 
+    &.#{$namespace}-one-half{ width: 50%; float: left; padding-left: calc-percent($column-gutter, $page-width); }
+    &.#{$namespace}-one-third{ width: 33.33333%; padding-left: calc-percent($column-gutter, $page-width); }
+    &.#{$namespace}-two-thirds{ width: 66.66666%; padding-left: calc-percent($column-gutter, $page-width); }
+    &.#{$namespace}-one-quarter{ width: 25%; padding-left: calc-percent($column-gutter, $page-width); }
+    &.#{$namespace}-three-quarters{ width: 75%; padding-left: calc-percent($column-gutter, $page-width); }
+}
 
 // Browser Prefixing
 @mixin support-ie($version) {  

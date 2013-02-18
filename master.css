@@ -376,32 +376,36 @@ img {
   zoom: 1;
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin-left: -3.125%; }
   .grid:before, .grid:after {
     content: "";
     display: table; }
   .grid:after {
     clear: both; }
-  @media screen and (min-width: 480px) {
-    .grid {
-      margin-left: -3.125%; } }
 
 .grid-unit {
-  width: 100%; }
+  width: 100%;
+  padding-left: 3.125%; }
   .grid-unit.mobile-one-half {
-    width: 50%; }
+    width: 50%;
+    float: left;
+    padding-left: 3.125%; }
   .grid-unit.mobile-one-third {
-    width: 33.33333%; }
+    width: 33.33333%;
+    padding-left: 3.125%; }
   .grid-unit.mobile-two-thirds {
-    width: 66.66666%; }
+    width: 66.66666%;
+    padding-left: 3.125%; }
   .grid-unit.mobile-one-quarter {
-    width: 25%; }
+    width: 25%;
+    padding-left: 3.125%; }
   .grid-unit.mobile-three-quarters {
-    width: 75%; }
+    width: 75%;
+    padding-left: 3.125%; }
   @media screen and (min-width: 480px) {
     .grid-unit {
-      float: left;
-      padding-left: 3.125%; }
+      float: left; }
       .grid-unit.one-twelfth {
         width: 8.33333%; }
       .grid-unit.two-twelfths {
@@ -425,7 +429,8 @@ img {
       .grid-unit.eleven-twelfths {
         width: 91.66667%; }
       .grid-unit.whole {
-        width: 100%; } }
+        width: 100%;
+        float: none; } }
   .grid-unit.centered {
     margin: 0 auto;
     float: none; }
