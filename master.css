@@ -386,51 +386,61 @@ img {
 
 .grid-unit {
   width: 100%;
-  padding-left: 3.125%; }
-  .grid-unit.mobile-one-half {
-    width: 50%;
-    float: left;
-    padding-left: 3.125%; }
-  .grid-unit.mobile-one-third {
-    width: 33.33333%;
-    padding-left: 3.125%; }
-  .grid-unit.mobile-two-thirds {
-    width: 66.66666%;
-    padding-left: 3.125%; }
-  .grid-unit.mobile-one-quarter {
-    width: 25%;
-    padding-left: 3.125%; }
-  .grid-unit.mobile-three-quarters {
-    width: 75%;
-    padding-left: 3.125%; }
-  @media screen and (min-width: 480px) {
-    .grid-unit {
-      float: left; }
-      .grid-unit.one-twelfth {
-        width: 8.33333%; }
-      .grid-unit.two-twelfths {
-        width: 16.66667%; }
-      .grid-unit.three-twelfths {
-        width: 25%; }
-      .grid-unit.four-twelfths {
-        width: 33.33333%; }
-      .grid-unit.five-twelfths {
-        width: 41.66667%; }
-      .grid-unit.six-twelfths {
-        width: 50%; }
-      .grid-unit.seven-twelfths {
-        width: 58.33333%; }
-      .grid-unit.eight-twelfths {
-        width: 66.66667%; }
-      .grid-unit.nine-twelfths {
-        width: 75%; }
-      .grid-unit.ten-twelfths {
-        width: 83.33333%; }
-      .grid-unit.eleven-twelfths {
-        width: 91.66667%; }
-      .grid-unit.whole {
-        width: 100%;
-        float: none; } }
+  padding-left: 3.125%;
+  float: left; }
   .grid-unit.centered {
     margin: 0 auto;
     float: none; }
+
+.mobile-one-half {
+  width: 50%; }
+
+.mobile-one-third {
+  width: 33.33333%; }
+
+.mobile-two-thirds {
+  width: 66.66666%; }
+
+.mobile-one-quarter {
+  width: 25%; }
+
+.mobile-three-quarters {
+  width: 75%; }
+
+@media screen and (min-width: 480px) {
+  .one-twelfth {
+    width: 8.33333%; }
+
+  .two-twelfths {
+    width: 16.66667%; }
+
+  .three-twelfths {
+    width: 25%; }
+
+  .four-twelfths {
+    width: 33.33333%; }
+
+  .five-twelfths {
+    width: 41.66667%; }
+
+  .six-twelfths {
+    width: 50%; }
+
+  .seven-twelfths {
+    width: 58.33333%; }
+
+  .eight-twelfths {
+    width: 66.66667%; }
+
+  .nine-twelfths {
+    width: 75%; }
+
+  .ten-twelfths {
+    width: 83.33333%; }
+
+  .eleven-twelfths {
+    width: 91.66667%; }
+
+  .whole {
+    width: 100%;
+    float: none; } }
