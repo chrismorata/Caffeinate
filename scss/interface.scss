@@ -1,0 +1,49 @@
+/*  @group Resets
+    ========================================================================== */
+    input[type="button"], input[type="submit"], button, label[for]{ cursor: pointer;}
+    
+/* @end */
+
+
+/*  @group Global Styles
+    ========================================================================== */
+    body{  }
+
+/* @end */
+
+
+/*  @group UI Modules
+    ========================================================================== */
+
+
+/* @end */
+
+
+/*  @group UI Helpers
+    ========================================================================== */
+    .float-left{ float: left; }
+    .float-right{ float: right; }
+    .clear{ clear: both; }
+    
+    .text-left{ text-align: left; }
+    .text-right{ text-align: right; }
+    .text-center{ text-align: center; }
+    
+    .cf {
+    	@include clearfix();
+    }
+    
+    .clear{ clear: both; }
+
+/* @end */
+
+
+/*  @group Media Queries
+    ========================================================================== */
+
+    @include respond-to($desktop-breakpoint){  
+    
+    }
+
+
+/* @end */
